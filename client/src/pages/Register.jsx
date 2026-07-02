@@ -39,7 +39,7 @@ function Register() {
       <div className="w-full max-w-md bg-white dark:bg-slate-900 rounded-3xl shadow-xl p-8">
         <div className="text-center mb-8">
           <div className="flex items-center justify-center mx-auto mb-4">
-            <img src="../../public/logo.png" alt="Logo" className="w-32 h-25" />
+            <img src="/logo.png" alt="Logo" className="w-32 h-25" />
           </div>
 
           <h1 className="text-2xl font-bold">Create Your Traction Account</h1>
