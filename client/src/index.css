@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.color-empty {
+  fill: #ebedf0;
+}
+.color-filled {
+  fill: #22c55e;
+}
+
+.rdp {
+  --rdp-cell-size: 42px;
+  margin: 0 auto;
+}
+
+.rdp-day {
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.rdp-day:hover {
+  transform: scale(1.1);
+}
+
+.habit-completed {
+  background: linear-gradient(135deg, #22c55e, #16a34a) !important;
+  color: white !important;
+  font-weight: 700;
+}
+
+.rdp-day_today {
+  border: 2px solid #3b82f6;
+  font-weight: 700;
+}
+
+.rdp-button:hover:not([disabled]) {
+  background-color: #f1f5f9;
+}
+
+.dark .rdp-button:hover:not([disabled]) {
+  background-color: #334155;
+}
+
+.rdp-caption_label {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.rdp-nav button {
+  border-radius: 9999px;
+}
+.color-empty {
+  fill: #1e293b;
+}
+
+.color-github-1 {
+  fill: #0e4429;
+}
+
+.color-github-2 {
+  fill: #006d32;
+}
+
+.color-github-3 {
+  fill: #26a641;
+}
+
+.color-github-4 {
+  fill: #39d353;
+}
+.react-calendar-heatmap text {
+  fill: #94a3b8;
+  font-size: 10px;
+}
+
+.react-calendar-heatmap rect {
+  rx: 3;
+  ry: 3;
+}
+html {
+  scroll-behavior: smooth;
+}
