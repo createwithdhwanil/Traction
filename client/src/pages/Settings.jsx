@@ -45,11 +45,13 @@ export default function Settings() {
 
         <SectionCard>
           <div className="flex items-center gap-3 mb-4">
-            <User size={22} />
-            <h2 className="text-xl font-bold">Account</h2>
+            <User size={22} className="dark:text-white" />
+            <h2 className="text-xl font-bold dark:text-white">Account</h2>
           </div>
 
-          <p className="text-slate-500">Manage your profile and account.</p>
+          <p className="text-slate-500 dark:text-slate-400">
+            Manage your profile and account.
+          </p>
 
           <button
             onClick={() => navigate("/profile")}
@@ -63,12 +65,12 @@ export default function Settings() {
 
         <SectionCard>
           <div className="flex items-center gap-3 mb-4">
-            <Moon size={22} />
-            <h2 className="text-xl font-bold">Appearance</h2>
+            <Moon size={22} className="dark:text-white" />
+            <h2 className="text-xl font-bold dark:text-white">Appearance</h2>
           </div>
 
           <div className="flex justify-between items-center">
-            <span>Dark Mode</span>
+            <span className="dark:text-slate-400">Dark Mode</span>
 
             <input
               type="checkbox"
@@ -144,7 +146,7 @@ export default function Settings() {
           </div>
         </div>
       )}
-      <div className="border-t pt-4 mt-6 text-sm text-slate-500">
+      <div className="border-t pt-4 mt-6 text-sm text-slate-500 dark:text-slate-400">
         Traction v1.0.0
         <br />
         Crafted by Dhwanil Chaudhari

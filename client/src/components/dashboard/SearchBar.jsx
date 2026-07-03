@@ -17,7 +17,7 @@ function SearchBar({ searchTerm, setSearchTerm, filter, setFilter }) {
             placeholder="Search habits..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-12 pr-4 py-3 rounded-2xl border border-slate-200 dark:border-slate-700 dark:bg-slate-800 outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full pl-12 pr-4 py-3 rounded-2xl border border-slate-200 dark:border-slate-700 dark:bg-slate-800 dark:text-white dark:placeholder:text-white outline-none focus:ring-2 focus:ring-indigo-500"
           />
         </div>
 
@@ -32,7 +32,7 @@ function SearchBar({ searchTerm, setSearchTerm, filter, setFilter }) {
           <select
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
-            className="w-full appearance-none pl-12 pr-4 py-3 rounded-2xl border border-slate-200 dark:border-slate-700 dark:bg-slate-800 outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full appearance-none pl-12 pr-4 py-3 rounded-2xl border border-slate-200 dark:border-slate-700 dark:bg-slate-800 dark:text-white  outline-none focus:ring-2 focus:ring-indigo-500"
           >
             <option value="All">All Categories</option>
             <option value="General">General</option>

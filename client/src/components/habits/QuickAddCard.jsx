@@ -31,6 +31,8 @@ function QuickAddCard({ onCreate }) {
     setReminderEnabled(false);
     setReminderTime("");
   };
+  const inputStyles =
+    "w-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500";
 
   return (
     <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm p-6 mb-8">
@@ -40,9 +42,11 @@ function QuickAddCard({ onCreate }) {
         </div>
 
         <div>
-          <h2 className="text-xl font-bold dark:text-white">Quick Add Habit</h2>
+          <h2 className="text-xl font-bold text-slate-900 dark:text-white">
+            Quick Add Habit
+          </h2>
 
-          <p className="text-slate-500 text-sm">
+          <p className="text-sm text-slate-500 dark:text-slate-400">
             Create a new habit in seconds.
           </p>
         </div>
@@ -54,7 +58,7 @@ function QuickAddCard({ onCreate }) {
           placeholder="Habit title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="w-full rounded-2xl border border-slate-200 dark:border-slate-700 dark:bg-slate-800 px-4 py-3"
+          className={inputStyles}
           required
         />
 
@@ -62,14 +66,14 @@ function QuickAddCard({ onCreate }) {
           placeholder="Description (optional)"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-          className="w-full rounded-2xl border border-slate-200 dark:border-slate-700 dark:bg-slate-800 px-4 py-3"
+          className={inputStyles}
           rows="3"
         />
 
         <select
           value={category}
           onChange={(e) => setCategory(e.target.value)}
-          className="w-full rounded-2xl border border-slate-200 dark:border-slate-700 dark:bg-slate-800 px-4 py-3"
+          className={inputStyles}
         >
           <option>General</option>
           <option>Fitness</option>
@@ -80,7 +84,7 @@ function QuickAddCard({ onCreate }) {
         </select>
 
         <div>
-          <label className="block text-sm font-medium mb-2 text-slate-700 dark:text-slate-300">
+          <label className="block text-sm font-medium mb-2 text-slate-700 dark:text-white">
             Goal Days
           </label>
 
@@ -88,12 +92,14 @@ function QuickAddCard({ onCreate }) {
             type="number"
             min="0"
             value={goalDays}
-            onChange={(e) => setGoalDays(Number(e.target.value))}
+            onChange={(e) => setGoalDays(e.target.value)}
             placeholder="30"
-            className="w-full rounded-2xl border border-slate-200 dark:border-slate-700 dark:bg-slate-800 px-4 py-3"
+            className={inputStyles}
           />
 
-          <p className="text-xs text-slate-500 mt-1">Set 0 for no goal</p>
+          <p className="text-xs text-slate-500 dark:text-white mt-1 ">
+            Set 0 for no goal
+          </p>
         </div>
         <div className="flex items-center gap-3">
           <input
@@ -102,14 +108,16 @@ function QuickAddCard({ onCreate }) {
             onChange={(e) => setReminderEnabled(e.target.checked)}
           />
 
-          <label>Enable Reminder</label>
+          <label className="text-slate-700 dark:text-white">
+            Enable Reminder
+          </label>
         </div>
         {reminderEnabled && (
           <input
             type="time"
             value={reminderTime}
             onChange={(e) => setReminderTime(e.target.value)}
-            className="w-full rounded-2xl border border-slate-200 dark:border-slate-700 dark:bg-slate-800 px-4 py-3"
+            className={inputStyles}
           />
         )}
         <button

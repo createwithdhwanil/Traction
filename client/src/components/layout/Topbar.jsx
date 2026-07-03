@@ -1,6 +1,7 @@
 import { Menu, Sun, Moon } from "lucide-react";
 import useAuth from "../../hooks/useAuth";
 import { useTheme } from "../../context/ThemeContext";
+import { useNavigate } from "react-router-dom";
 function Topbar({ onMenu }) {
   const { user } = useAuth();
   const { darkMode, toggleTheme } = useTheme();
@@ -9,6 +10,7 @@ function Topbar({ onMenu }) {
     month: "long",
     day: "numeric",
   });
+  const navigate = useNavigate();
   return (
     <header className="flex items-center justify-between mb-8">
       {" "}
@@ -17,7 +19,7 @@ function Topbar({ onMenu }) {
         {" "}
         <button
           onClick={onMenu}
-          className="lg:hidden p-3 rounded-2xl bg-white dark:bg-slate-900 shadow-sm hover:shadow-md transition"
+          className="lg:hidden p-3 rounded-2xl bg-white dark:bg-slate-900 dark:text-white shadow-sm hover:shadow-md transition"
         >
           {" "}
           <Menu size={22} />{" "}
@@ -37,7 +39,7 @@ function Topbar({ onMenu }) {
         {/* Theme Toggle */}{" "}
         <button
           onClick={toggleTheme}
-          className="flex items-center justify-center w-11 h-11 rounded-2xl bg-white dark:bg-slate-900 shadow-sm hover:shadow-md transition"
+          className="flex items-center justify-center w-11 h-11 rounded-2xl bg-white dark:bg-slate-900 dark:text-white shadow-sm hover:shadow-md transition"
           title={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
         >
           {" "}
@@ -46,10 +48,9 @@ function Topbar({ onMenu }) {
         {/* User */}{" "}
         <div className="flex items-center gap-3 ml-2">
           {" "}
-          <div className="w-11 h-11 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-lg">
-            {" "}
-            {user?.name?.charAt(0).toUpperCase() || "U"}{" "}
-          </div>{" "}
+          <div className="w-11 h-11 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-lg hover:bg-indigo-700 transition">
+            {user?.name?.charAt(0).toUpperCase() || "U"}
+          </div>
           <div className="hidden lg:block">
             {" "}
             <p className="font-semibold text-slate-900 dark:text-white">

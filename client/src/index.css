@@ -82,3 +82,7 @@
 html {
   scroll-behavior: smooth;
 }
+.habit-selected {
+  background-color: #3b82f6 !important;
+  color: white !important;
+}

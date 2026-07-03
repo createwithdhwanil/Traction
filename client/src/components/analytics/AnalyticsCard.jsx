@@ -66,10 +66,10 @@ function AnalyticsCard({ dashboard }) {
         <div className="flex justify-between mb-2">
           <div className="flex items-center gap-2">
             <Target className="text-green-500" size={18} />
-            <span className="font-medium">Weekly Goal</span>
+            <span className="font-medium dark:text-white">Weekly Goal</span>
           </div>
 
-          <span className="font-semibold">
+          <span className="font-semibold dark:text-white">
             {weeklyGoal?.completed || 0} / {weeklyGoal?.target || 7}
           </span>
           <p className="text-xs text-slate-500 mt-2">

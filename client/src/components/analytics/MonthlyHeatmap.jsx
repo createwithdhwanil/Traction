@@ -10,7 +10,7 @@ export default function MonthlyHeatmap({ logs = [] }) {
   return (
     <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6">
       <h2 className="text-xl font-bold mb-4 text-slate-900 dark:text-white">
-        🔥 Activity Heatmap
+        🔥 Traction Heatmap
       </h2>
 
       <CalendarHeatmap

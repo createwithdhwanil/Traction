@@ -195,7 +195,7 @@ function Dashboard() {
 
               <button
                 onClick={() => setShowQuickAdd(false)}
-                className="text-3xl leading-none"
+                className="text-3xl leading-none dark:text-white"
               >
                 ×
               </button>

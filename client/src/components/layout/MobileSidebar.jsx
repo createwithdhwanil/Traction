@@ -69,7 +69,7 @@ function MobileSidebar({ open, setOpen, onLogout }) {
               onClick={() => setOpen(false)}
               className="p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"
             >
-              <X size={22} />
+              <X size={22} className="text-slate-700 dark:text-white" />
             </button>
           </div>
 
