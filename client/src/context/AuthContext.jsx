@@ -23,12 +23,14 @@ function AuthProvider({ children }) {
 
     try {
       const data = await getProfile();
-
       setUser(data.user);
     } catch (error) {
-      localStorage.removeItem("token");
+      console.error("Profile load failed:", error);
 
-      setUser(null);
+      if (error.response?.status === 401) {
+        localStorage.removeItem("token");
+        setUser(null);
+      }
     } finally {
       setLoading(false);
     }
